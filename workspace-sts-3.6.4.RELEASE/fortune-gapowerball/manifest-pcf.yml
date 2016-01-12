@@ -7,7 +7,8 @@ applications:
   services:
   - fortune-db
   - config-server
-  - service-registry
+  - registry
   env:
       SPRING_PROFILES_ACTIVE: pcf
+      CF_TARGET: https://api.system.mgpcf.net
   random-route: true

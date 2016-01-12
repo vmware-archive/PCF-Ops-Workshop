@@ -12,10 +12,11 @@
 	<description>Fortune GA Powerball Service</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.5.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<groupId>io.pivotal.spring.cloud</groupId>
+		<artifactId>spring-cloud-services-starter-parent</artifactId>
+		<version>1.0.2.BUILD-SNAPSHOT</version>
+		<relativePath />
+		<!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -30,23 +31,17 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
-		  <groupId>io.pivotal.spring.cloud</groupId>
-		  <artifactId>spring-cloud-pivotal-cloudfoundry-connector</artifactId>
-		  <version>1.0.0.M1</version>
-		</dependency>
-		<dependency>
             <groupId>io.pivotal.spring.cloud</groupId>
-            <artifactId>spring-cloud-pivotal-spring-connector</artifactId>
-            <version>1.0.0.M1</version>
+            <artifactId>spring-cloud-services-starter-config-client</artifactId>
         </dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter</artifactId>
-		</dependency>
+        <dependency>
+            <groupId>io.pivotal.spring.cloud</groupId>
+            <artifactId>spring-cloud-services-starter-service-registry</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.pivotal.spring.cloud</groupId>
+            <artifactId>spring-cloud-services-starter-circuit-breaker</artifactId>
+        </dependency>
 		<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
