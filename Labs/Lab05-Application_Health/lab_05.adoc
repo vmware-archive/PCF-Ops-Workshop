@@ -8,7 +8,7 @@ Additionally, Cloud Foundry actively monitors the health of our application proc
 
 In this lab, we'll explore a few of these mechanisms.
 --
-== Events
+== Events Overview
 
 Cloud Foundry only allows application configuration to be modified via its API.
 This gives application operators confidence that all changes to application configuration are known and auditable.
@@ -40,7 +40,7 @@ Here we see the `app.create` event, which created our application's record and s
 <5> Remember scaling the application up? This `app.update` event records the metadata change `instances: 5`.
 <6> And here's the `app.update` event recording our scaling of the application back down with `instances: 1`.
 ====
-
+== Add new Events
 . Let's explicitly ask for the application to be stopped:
 +
 ----
@@ -170,7 +170,7 @@ You can try various things like refreshing the browser and triggering stop/start
 
 == PCF Metrics
 
-Before we move forward with lab work, let's exmaine the imbeddeed monitoring tool called PCF Metrics. 
+Out of the box, PCF contains an imbeddeed monitoring tool called PCF Metrics. 
 
 In your browswer, navigate to your application's page. From there click on the link that says "View in PCF Metrics".
 
@@ -275,19 +275,14 @@ image::../../Common/images/papertrail_4.png[]
 +
 ----
 $ cf create-user-provided-service cf-scale-boot-logs -l syslog://logs2.papertrailapp.com:43882
-Creating user provided service cf-scale-boot-logs in org oreilly-class / space instructor as mstine@pivotal.io...
-OK
 ----
 
 . We bind that service instance like those we created in link:../lab_02/lab_02.adoc[Lab 2]:
 +
 ----
 $ cf bind-service cf-scale-boot cf-scale-boot-logs
-Binding service cf-scale-boot-logs to app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
-OK
-TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
-
++
 . In this case, a full restage isn't necessary (although it will work just fine), so we'll use a `cf restart` rather than `cf restage` to make the binding take effect:
 +
 ----
@@ -299,8 +294,6 @@ $ cf restart cf-scale-boot
 image::../../Common/images/papertrail_5.png[]
 
 You can see how to connect to other third-party log management systems in the http://docs.cloudfoundry.org/devguide/services/log-management-thirdparty-svc.html[Cloud Foundry documentation].
-
-
 
 == Clean Up
 
@@ -315,7 +308,7 @@ Really delete the app cf-scale-boot?> y
 Deleting app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
 'OK
 ----
-
++
 . Delete the `cf-scale-boot-logs` service:
 +
 ----
