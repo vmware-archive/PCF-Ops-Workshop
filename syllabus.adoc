@@ -17,7 +17,7 @@
 ** link:Labs/Lab05-Application_Health/lab_05.adoc[Lab - Application Health]
 * Patching & Updates
 ** link:Slides/PCF_Overview.pdf[Presentation]
-** link:Labs/Lab06-Blue_Green/lab_06.adoc[Lab - Blue/Green Deployments]
+** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab - Blue/Green Deployment]
 * Security
 ** link:Slides/PCF_Overview.pdf[Presentation]
 
