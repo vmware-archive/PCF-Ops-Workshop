@@ -35,7 +35,7 @@ $ cf marketplace
 and you'll get a list of services, their available plans, and descriptions.
 
 The second way is specific to Pivotal Cloud Foundry's Application Manager UI.
-If you haven't already, login to it by visiting https://apps.pcf10.cloud.fe.pivotal.io
+If you haven't already, login to it by visiting https://console.run.pivotal.io
 
 Click on the ``Marketplace'' link:
 
@@ -55,7 +55,6 @@ $ cf create-service p-mysql 100mb-dev spring-music-db
 Creating service spring-music-db in org oreilly-class / space instructor as mstine@pivotal.io...
 OK
 ----
-
 . Next we'll _bind_ the newly created instance to our `spring-music` application:
 +
 ----
@@ -64,7 +63,6 @@ Binding service spring-music-db to app spring-music in org oreilly-class / space
 OK
 TIP: Use 'cf restage' to ensure your env variable changes take effect
 ----
-
 . Notice the admonition to `Use 'cf restage' to ensure your env variable changes take effect`.
 Let's take a look at the environment variables for our application to see what's been done. We can do this by typing:
 +
@@ -105,7 +103,6 @@ System-Provided:
 <1> `VCAP_SERVICES` is a special Cloud Foundry environment variable that contains a JSON document containing all of the information for any services bound to an application.
 <2> Notice here the unique URI for this instance of MySQL that `spring-music` has been bound to.
 ====
-
 . Now let's _restage_ the application, which cycles our application back through the staging/buildpack process before redeploying the application.footnote:[In this case, we could accomplish the same goal by only _restarting_ the application via `cf restart spring-music`.
 A _restage_ is generally recommended because Cloud Foundry buildpacks also have access to injected environment variables and can install or configure things differently based on their values.]
 +
