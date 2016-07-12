@@ -3,27 +3,25 @@
 
 [abstract]
 --
-In this lab we will be using routes to perform a zero-downtime application upgrade with a blue/green deployment.
+Using a blue/green deployment technique, zero-downtime upgrades for your applications are possible with PCF.
 
 By applying the same route to multiple versions of the application, the GoRouter will automatically balance traffic between the different versions. Once the older version is removed, all users will directed to new version with no interruption of applicaiton usage. 
-
-Time estimation: 15 minutes
 --
 . Push version 1 of the 'Hello World' php application.
 +
 ----
-$ cf push v1_app -n v1_hostname -p HelloWorld.php
+$ cf push HelloWorld_v1 -n HelloWorld_v1
 ----
 +
 . Once the application is started, navigate to the application's url in your browser to see the application is running.
 . Push your updated application, version 2.
 +
 ----
-$ cf push v2_app -n v2_hostname -p HelloWorld_V2.php
+$ cf push HelloWorld_v2 -n HelloWorld_v2
 ----
 +
-Ensure that v2 of your application has a separate hostname from v1, which will ensure it also has a separate route.
-. Use Apps Manager or the CLI to verify that you now have two different applications with two different routes.
+Notice that v2 of your application has a separate hostname from v1, which will ensure it also has a separate route.
+. Use the CLI to verify that you now have two different applications with two different routes.
 +
 ----
 $ cf routes
@@ -31,17 +29,17 @@ $ cf routes
 +
 . In a browser, access your version 2 application on its unique route.
 Let's assume your application is stable and we are ready to move all traffic on the v1 route to the v2 application.
-. Map the v1 route on your v2 app to point to the route on the v1 app.
+. Map the v1 route on your v2 app to point to the route on the v1 app. `DOMAIN` refers to the portion of the route specific to PWS. 
 +
 ----
-$ cf map-route v2_app DOMAIN -h v1_hostname
+$ cf map-route V2_APP_NAME DOMAIN -h V1_HOSTNAME
 ----
 +
 . Refresh your browser a few times using the original route. Notice that both versions are sometimes displayed.
 . Unmap the route to the version 1 application.
 +
 ----
-$ cf unmap-route v1_app DOMAIN -h v1_hostname
+$ cf unmap-route V1_APP_NAME DOMAIN -h V1_HOSTNAME
 ----
 +
 Now on the original route, you should only see version 2 of the application. The end users never experienced any downtime.
