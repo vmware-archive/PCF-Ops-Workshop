@@ -8,7 +8,7 @@
 ** link:Labs/Lab02-Services/lab_02.adoc[Lab]
 * Orgs, Spaces, Users, Roles
 ** link:Slides/PCF_Overview.pdf[Presentation]
-** link:Labs/Lab03-Org,Space,Users,Roles/lab_03.adoc[Lab]
+** link:Labs/Lab03-RBAC/lab_03.adoc[Lab]
 * Scaling
 ** link:Slides/PCF_Overview.pdf[Presentation]
 ** link:Labs/Lab04-Scaling/lab_04.adoc[Lab]
