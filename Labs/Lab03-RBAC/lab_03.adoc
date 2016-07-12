@@ -34,4 +34,3 @@ Once the new member has accepted, use the CLI to verify that you have the member
 $ cf org-users
 ----
 Using the CLI, add the member to your labtest space as a SpaceDeveloper. (Hint: this is accomplished through roles)
-Log out as the developer user and back in as the organization manager.
