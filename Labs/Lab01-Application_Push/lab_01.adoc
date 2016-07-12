@@ -156,6 +156,6 @@ You can get the same output at any time by typing `cf app spring-music`.
 +
 image::/../../Common/images/Spring_Music_NS.png[]
 +
-Be sure to click on the ``information icon'' in the top right-hand corner of the UI.
+Be sure to click on the `information icon` in the top right-hand corner of the UI.
 This gives you important information about the state of the currently running _Spring Music_ instance, including what Spring Profiles are turned on and what Cloud Foundry services are bound.
 It will become important in the next lab!
