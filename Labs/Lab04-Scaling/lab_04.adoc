@@ -133,7 +133,7 @@ image::../../Common/images/cf-scale-boot-unscaled.png[]
 
 == Scale from the Apps Manager
 
-.  Let's try the same scaling from the Apps Manager.  The URL of the apps manager will vary based on the PCF environment you've been assigned, but is always at `api.[pcf-domain]`, e.g. https://apps.pcf5.cloud.fe.pivotal.io
+.  Let's try the same scaling from the Apps Manager.  The URL of the apps manager will vary based on the PCF environment you've been assigned, but is always at `api.[pcf-domain]`, e.g. https://console.run.pivotal.io
 
 . Click into the `development` space
 +
@@ -151,7 +151,7 @@ image::../../Common/images/appsmanager3.png[]
 
 .  There are many additional features available to users of Pivotal's Cloud Foundry when compared to Open Source Cloud Foundry.  These include things like Spring Cloud Services, Single Sign on for Applications, LDAP integration, Session State Caching with Gemfire, the Ops Manager, Ops Metrics, the Apps Manager - and many more.  One of these additional features includes the Application Autoscaling capability.  Let's set this up.
 
-. Go back to the Apps Manager using the appropriate URL for your installation of Pivotal Cloud Foundry, e.g. https://console.run.pivotal.io
+. Go back to the Apps Manager. 
 
 . Click on the _Marketplace_ link, found on the left hand side navigational panel.
 
