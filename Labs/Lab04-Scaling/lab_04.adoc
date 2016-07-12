@@ -37,8 +37,6 @@ It also keeps track of and reports how many web requests that this instance has 
 +
 ----
 $ cf scale -i 5 cf-scale-boot
-Scaling app cf-scale-boot in org oreilly-class / space instructor as mstine@pivotal.io...
-OK
 ----
 +
 In reporting `OK`, the CLI is letting you know that the additional requested instances have been started, but they are not yet necessarily running.
@@ -149,7 +147,7 @@ image::../../Common/images/appsmanager2.png[]
 +
 image::../../Common/images/appsmanager3.png[]
 
-== Set up Autoscaling
+== App Autoscaler
 
 .  There are many additional features available to users of Pivotal's Cloud Foundry when compared to Open Source Cloud Foundry.  These include things like Spring Cloud Services, Single Sign on for Applications, LDAP integration, Session State Caching with Gemfire, the Ops Manager, Ops Metrics, the Apps Manager - and many more.  One of these additional features includes the Application Autoscaling capability.  Let's set this up.
 
