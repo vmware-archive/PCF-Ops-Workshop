@@ -1,0 +1,37 @@
+:compat-mode:
+= Lab 3 - Role Based Access Control
+
+[abstract]
+--
+Access into the various environments of your Pivotal Cloud Foundry instace is role based. These environments are made up of isolated tiers, the first being an Org and the section tier is known as a Space. Users are assigned roles to enable access to the various responsiblites of these environments.
+
+We are going make a new space and add a new user then assign the roles necessary to push and administer your applications.
+--
+
+== Create a space in your organization
+In the CLI, make sure you are targeting your PCF foundation.
+
+Using the CLI and cf help, perform the following:
+
+. Find the name of your organization.
+
+. List the spaces in your organization.
+
+. Create a new space called "labtest". 
+
+. Verify the organization manager now has SpaceManager and SpaceDeveloper roles for the new space.
+
+. List the space-users in the labtest space.
+
+In your browser, verify that your labtest space is visible in your PWS Apps Manager.
+
+== Add a user to the new space
+Using the email address of the person next to you, add that user to you PWS organization. 
+In Apps Manager, click on your organization, then the Members tab, then Invite New Members.
+
+Once the new member has accepted, use the CLI to verify that you have the member in your organization.
+----
+$ cf org-users
+----
+Using the CLI, add the member to your labtest space as a SpaceDeveloper. (Hint: this is accomplished through roles)
+Log out as the developer user and back in as the organization manager.

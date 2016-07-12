@@ -1,0 +1,25 @@
+== Syllabus
+
+* PCF Overview 
+** link:Slides/PCF_Overview.pdf[Presentation]
+** link:Labs/Lab01-Application_Push/lab_01.adoc[Lab - Pushing an Application]
+* Services
+** link:Slides/Services.pdf[Presentation]
+** link:Labs/Lab02-Services/lab_02.adoc[Lab]
+* Orgs, Spaces, Users, Roles
+** link:Slides/PCF_Overview.pdf[Presentation]
+** link:Labs/Lab03-Org,Space,Users,Roles/lab_03.adoc[Lab]
+* Scaling
+** link:Slides/PCF_Overview.pdf[Presentation]
+** link:Labs/Lab04-Scaling/lab_04.adoc[Lab]
+* Platform/App Health
+** link:Slides/PCF_Overview.pdf[Presentation]
+** link:Labs/Lab05-Application_Health/lab_05.adoc[Lab - Application Health]
+* Patching & Updates
+** link:Slides/PCF_Overview.pdf[Presentation]
+** link:Labs/Lab06-Blue_Green/lab_06.adoc[Lab - Blue/Green Deployments]
+* Security
+** link:Slides/PCF_Overview.pdf[Presentation]
+
+
+
