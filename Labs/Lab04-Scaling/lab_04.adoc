@@ -151,7 +151,7 @@ image::../../Common/images/appsmanager3.png[]
 
 .  There are many additional features available to users of Pivotal's Cloud Foundry when compared to Open Source Cloud Foundry.  These include things like Spring Cloud Services, Single Sign on for Applications, LDAP integration, Session State Caching with Gemfire, the Ops Manager, Ops Metrics, the Apps Manager - and many more.  One of these additional features includes the Application Autoscaling capability.  Let's set this up.
 
-. Go back to the Apps Manager using the appropriate URL for your installation of Pivotal Cloud Foundry, e.g. https://apps.pcf5.cloud.fe.pivotal.io
+. Go back to the Apps Manager using the appropriate URL for your installation of Pivotal Cloud Foundry, e.g. https://console.run.pivotal.io
 
 . Click on the _Marketplace_ link, found on the left hand side navigational panel.
 
