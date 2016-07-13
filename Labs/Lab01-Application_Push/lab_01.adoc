@@ -138,15 +138,15 @@ Take a look at `manifest.yml` to see how.
 <2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
 In this case, the CLI has created an application record for _Spring Music_ in your assigned space.
 <3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
-Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default `cfapps.io` domain.
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default PCF domain.
 <4> Now the CLI is _binding_ the created route to the application.
 Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
-<5> The CLI finally uploads the application bits to PWS. Notice that it's uploading _90 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
+<5> The CLI finally uploads the application bits to PCF. Notice that it's uploading _90 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
 <6> Now we begin the staging process. The https://github.com/cloudfoundry/java-buildpack[Java Buildpack] is responsible for assembling the runtime components necessary to run the application.
 <7> Here we see the version of the JRE that has been chosen and installed.
 <8> And here we see the version of Tomcat that has been chosen and installed.
 <9> The complete package of your application and all of its necessary runtime components is called a _droplet_.
-Here the droplet is being uploaded to PWS's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/diego/diego-components.html#cell-components[Diego Cells]_ for execution.
+Here the droplet is being uploaded to PCF's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/diego/diego-components.html#cell-components[Diego Cells]_ for execution.
 <10> The CLI tells you exactly what command and argument set was used to start your application.
 <11> Finally the CLI reports the current status of your application's health.
 You can get the same output at any time by typing `cf app spring-music`.
