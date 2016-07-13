@@ -172,17 +172,17 @@ You can try various things like refreshing the browser and triggering stop/start
 
 The loggregator component of of Cloud Foundry not only aggregates application logs.  It also combines those log entries with monitoring metrics for the platform components supporting your application.  Pivotal provides an agentless monitoring tool called PCF Metrics that leverages these additional monitoring metrics to provide performance monitoring metrics for running applications.
 
-In your browswer, navigate to http://metrics.<DOMAIN-PROVIDED-BY-INSTRUCTOR>.  You may be asked to sign in again with your user id and password.
+. In your browswer, navigate to http://metrics.<DOMAIN-PROVIDED-BY-INSTRUCTOR>.  You may be asked to sign in again with your user id and password.
 
-After signing in, the first time you access PCF Metrics, you will be asked to grant PCF Metrics the ability to examine the details associated with your applications.  Make sure to click "Authorize" to allow PCF Metrics to show you metrics from your apps.
+. After signing in, the first time you access PCF Metrics, you will be asked to grant PCF Metrics the ability to examine the details associated with your applications.  Make sure to click "Authorize" to allow PCF Metrics to show you metrics from your apps.
 +
 image::../../Common/images/pcf-metrics-oauth2-grant.png[]
 
-The browser will then show a search box at the top of the screen that you can use to find the applications you want to view metrics on.  Click on the search box, type `cf-scale-boot`, and select the `cf-scale-boot` application from the list.
+. The browser will then show a search box at the top of the screen that you can use to find the applications you want to view metrics on.  Click on the search box, type `cf-scale-boot`, and select the `cf-scale-boot` application from the list.
 +
 image::../../Common/images/pcf-metrics-search-app.png[]
 
-This will bring you to the PCF Metrics page for the `cf-scale-boot` application. The dashboard will give you a great overview of how your application is behaving. As we continue through the lab, you can periodically check back to this page and you can see in real time how the application is monitored by PCF Metrics.
+. This will bring you to the PCF Metrics page for the `cf-scale-boot` application. The dashboard will give you a great overview of how your application is behaving. As we continue through the lab, you can periodically check back to this page and you can see in real time how the application is monitored by PCF Metrics.
 
 == Health
 
