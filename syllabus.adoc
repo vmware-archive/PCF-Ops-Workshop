@@ -18,8 +18,8 @@
 * Platform and Application Health
 ** link:Slides/06-Ops_Workshop-Platform_and_Application_Health.pdf[Presentation]
 ** link:Labs/Lab05-Application_Health/lab_05.adoc[Lab - Application Health]
-* Patching and Updates
-** link:Slides/PCF_Overview.pdf[Presentation]
+* Patching and Upgrades
+** link:Slides/07-Ops_Workshop-Patching_and_Upgrading.pdf[Presentation]
 ** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab - Blue/Green Deployment]
 * Security
 ** link:Slides/PCF_Overview.pdf[Presentation]
