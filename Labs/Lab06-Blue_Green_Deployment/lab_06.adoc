@@ -33,7 +33,7 @@ After executing the command you will notice that there are two urls listed for t
 +
 . In a browser, access your "Hello World" application using the customer facing route (NOTE: This one begins with "hello-" and is pointing to the hello-v1 application). Once entered, your browser should display the following text: _Hello world version 1_.
 . In a different browser tab, access the url for your hello-v1 application that begins with "v1-hello".  This should display the same results.
-. In a different browser tab, access the url for your hello-v2 applicaion that begins with "v2-hello".  Once entered, your browser should display the following text: _Hello world version 2_. (NOTE: This is a different version number than the previous two URLs)
+. In a third browser tab, access the url for your hello-v2 applicaion that begins with "v2-hello".  Once entered, your browser should display the following text: _Hello world version 2_. (NOTE: This is a different version number than the previous two URLs)
 . Once your application has been tested, you can easily transition customer facing traffic to version 2 of your application.
 +
 Map your customer facing route beginning with "hello-" on your v1 app to point to the route on the v2 app. `DOMAIN` refers to the portion of the route specific to PWS. 
