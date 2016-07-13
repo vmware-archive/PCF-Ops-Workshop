@@ -13,16 +13,24 @@ In the CLI, make sure you are targeting your PCF foundation.
 
 Using the CLI and cf help, perform the following:
 
-. Find the name of your organization.
-
-. List the spaces in your organization.
-
+. Find the name of your Org.
+----
+$ cf target
+----
+. List the spaces in your Org.
+----
+$ cf spaces
+----
 . Create a new space called "labtest". 
-
+----
+$ cf create-space labtest -o <REPLACE_WITH_YOUR_ORG>
+----
 . Verify the organization manager now has SpaceManager and SpaceDeveloper roles for the new space.
 
 . List the space-users in the labtest space.
-
+----
+$ cf space-users <REPLACE_WITH_YOUR_ORG> labtest
+----
 In your browser, verify that your labtest space is visible in your PWS Apps Manager.
 
 == Add a user to the new space
