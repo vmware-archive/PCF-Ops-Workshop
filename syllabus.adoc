@@ -10,7 +10,7 @@
 ** link:Slides/3-Ops_Workshop-Platform_Installation_and_Setup.pdf[Presentation]
 ** link:Slides/PCF-Installation-ClickThrough.pdf[Installation Clickthru]
 * Role Based Access Control
-** link:Slides/PCF_Overview.pdf[Presentation]
+** link:Slides/4-Ops_Workshop-RBAC.pdf[Presentation]
 ** link:Labs/Lab03-RBAC/lab_03.adoc[Lab]
 * Scaling
 ** link:Slides/5-Ops_Workshop-Platform_and_Application_Scaling.pdf[Presentation]
