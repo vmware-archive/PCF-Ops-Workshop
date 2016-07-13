@@ -3,7 +3,7 @@
 
 [abstract]
 --
-Using a blue/green deployment technique, zero-downtime upgrades for your applications are possible with PCF.
+PCF enables users to easily conduct zero-downtime upgrades of their applications using blue/green deployments.
 
 By applying the same route to multiple versions of the application, the GoRouter will automatically balance traffic between the different versions. Once the older version is removed, all users will directed to new version with no interruption of applicaiton usage. 
 --
@@ -17,7 +17,7 @@ cd $COURSE_HOME/Labs/Lab06-Blue_Green_Deployment
 ----
 $ cf push 
 ----
-. Use the CLI to verify that you now have two different "Hello World" applications deployed to PCF using the below command.  
+. Verify that you now have two different "Hello World" applications deployed to PCF by issuing the following command.  
 +
 ----
 $ cf apps
@@ -29,7 +29,7 @@ $ cf apps
 $ cf routes
 ----
 +
-After executing the command you will notice that there are two urls listed for the hello-v1 application.  One will be simulating a customer facing url that is in the format of hello-<RANDOM_WORD>.<DOMAIN>.  The other will be used for internal teams to access the v1 application directly and is in the format of v1-hello-<RANDOM_WORD>.<DOMAIN>.  Notice that the hello-v2 application only has 1 url in the format of v2-hello-<RANDOM_WORD>.<DOMAIN>.  The reason for this is that we do not want any customer facing traffic hitting the v2 application yet.
+After executing the command you will notice that there are two urls listed for the hello-v1 application.  One that will be used to simulate a customer facing url that is in the format of hello-<RANDOM_WORD>.<DOMAIN>.  The other will be used for internal teams to access the v1 application directly and is in the format of v1-hello-<RANDOM_WORD>.<DOMAIN>.  Notice that the hello-v2 application only has 1 url in the format of v2-hello-<RANDOM_WORD>.<DOMAIN>.  The reason for this is that we do not want any customer facing traffic hitting the v2 application yet.
 +
 . In a browser, access your "Hello World" application using the customer facing route (NOTE: This one begins with "hello-" and is pointing to the hello-v1 application). Once entered, your browser should display the following text: _Hello world version 1_.
 . In a different browser tab, access the url for your hello-v1 application that begins with "v1-hello".  This should display the same results.
