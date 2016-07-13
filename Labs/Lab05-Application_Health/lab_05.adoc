@@ -217,7 +217,7 @@ Also, if you're paying attention to the log tail, you'll see some interesting lo
 <3> The API logs that an application instance exited due to a crash.
 ====
 
-. Check the application events to see another indicator of the crash:
+. Open another command prompt window and check the application events to see another indicator of the crash:
 +
 ----
 $ cf events cf-scale-boot
@@ -252,8 +252,8 @@ image::../../Common/images/cf-scale-boot-healed.png[]
 == Log Sinks
 
 Application operators will also enjoy commands like `cf logs`, but are often interested in long-term retention, indexing, and analysis of logs as well.
-Cloud Foundry currently only provides short-term retention of logs.
-To meet these needs, Cloud Foundry provides the ability to http://docs.cloudfoundry.org/devguide/services/log-management.html[drain logs to third-party providers.]
+Cloud Foundry currently only provides very short-term retention of logs.
+To better meet the needs of operators, Cloud Foundry provides the ability to http://docs.cloudfoundry.org/devguide/services/log-management.html[drain logs to third-party providers.]
 
 In this section, we'll drain logs to a very simple provider called https://papertrailapp.com[Papertrail].
 
