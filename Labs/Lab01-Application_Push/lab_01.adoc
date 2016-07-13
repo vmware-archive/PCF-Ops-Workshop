@@ -4,7 +4,7 @@
 --
 The prime directive of Pivotal Cloud Foundry is to host applications. We are going to exercise that directive by pushing a very simple Spring application.
 
-By the end of this lab you should have your spring-music application up and running in your PWS account.
+By the end of this lab you should have your spring-music application up and running in your account.
 --
 
 == Set your target environment
