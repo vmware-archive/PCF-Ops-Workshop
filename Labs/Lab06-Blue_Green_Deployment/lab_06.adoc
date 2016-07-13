@@ -7,26 +7,17 @@ Using a blue/green deployment technique, zero-downtime upgrades for your applica
 
 By applying the same route to multiple versions of the application, the GoRouter will automatically balance traffic between the different versions. Once the older version is removed, all users will directed to new version with no interruption of applicaiton usage. 
 --
-. Change to the Blue Green Deployment Lab Directory:
+. Change to the Blue Green Deployment lab directory:
 +
 ----
 cd $COURSE_HOME/Labs/Lab06-Blue_Green_Deployment
 ----
-. Push version 1 of the 'Hello World' php application.
+. Examine the manifest.yml file in the directory and note that it will push 2 different "Hellow World" php applications, hello-v1 and hello-v2.  Once you finish reviewing, push the applications using the below command:
 +
 ----
-$ cf push HelloWorld-v1 -n HelloWorld-v1
+$ cf push 
 ----
-+
-. Once the application is started, navigate to the application's url in your browser to see the application is running.
-. Push your updated application, version 2.
-+
-----
-$ cf push HelloWorld-v2 -n HelloWorld-v2
-----
-+
-Notice that v2 of your application has a separate hostname from v1, which will ensure it also has a separate route.
-. Use the CLI to verify that you now have two different applications with two different routes.
+. Use the CLI to verify that you now have two different applications with three different routes.  Two routes will point to hello-v1 and one route to hello-v2.
 +
 ----
 $ cf routes
