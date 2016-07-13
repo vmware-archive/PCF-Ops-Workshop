@@ -1,22 +1,22 @@
 == Syllabus
 
 * PCF Overview 
-** link:Slides/1-Ops_Workshop-Intro.pdf[Presentation]
+** link:Slides/01-Ops_Workshop-Intro.pdf[Presentation]
 ** link:Labs/Lab01-Application_Push/lab_01.adoc[Lab - Pushing an Application]
 * Services
-** link:Slides/2-Ops_Workshop-Services_Overview.pdf[Presentation]
+** link:Slides/02-Ops_Workshop-Services_Overview.pdf[Presentation]
 ** link:Labs/Lab02-Services/lab_02.adoc[Lab]
 * PCF Installation
-** link:Slides/3-Ops_Workshop-Platform_Installation_and_Setup.pdf[Presentation]
+** link:Slides/03-Ops_Workshop-Platform_Installation_and_Setup.pdf[Presentation]
 ** link:Slides/PCF-Installation-ClickThrough.pdf[Installation Clickthru]
 * Role Based Access Control
-** link:Slides/4-Ops_Workshop-RBAC.pdf[Presentation]
+** link:Slides/04-Ops_Workshop-RBAC.pdf[Presentation]
 ** link:Labs/Lab03-RBAC/lab_03.adoc[Lab]
 * Scaling
-** link:Slides/5-Ops_Workshop-Platform_and_Application_Scaling.pdf[Presentation]
+** link:Slides/05-Ops_Workshop-Platform_and_Application_Scaling.pdf[Presentation]
 ** link:Labs/Lab04-Scaling/lab_04.adoc[Lab]
 * Platform and Application Health
-** link:Slides/6-Ops_Workshop-Platform_and_Application_Health.pdf[Presentation]
+** link:Slides/06-Ops_Workshop-Platform_and_Application_Health.pdf[Presentation]
 ** link:Labs/Lab05-Application_Health/lab_05.adoc[Lab - Application Health]
 * Patching and Updates
 ** link:Slides/PCF_Overview.pdf[Presentation]
@@ -24,6 +24,8 @@
 * Security
 ** link:Slides/PCF_Overview.pdf[Presentation]
 ** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Application Security Group Clickthru]
+* Extras
+** link:Slides/10-Ops_Workshop-High_Availability.pdf[High Availiablity]
 
 
 
