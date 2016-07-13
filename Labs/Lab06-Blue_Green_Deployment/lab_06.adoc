@@ -17,7 +17,7 @@ cd $COURSE_HOME/Labs/Lab06-Blue_Green_Deployment
 ----
 $ cf push 
 ----
-. Use the CLI to verify that you now have two different "Hello World" applications deployed to PCF using the below command.  
+. Use the CLI to verify that you now have two different "Hello World" applications deployed to PCF by issuing the following command.  
 +
 ----
 $ cf apps
