@@ -3,7 +3,7 @@
 
 [abstract]
 --
-PCF allows users to easily conduct zero-downtime application upgrades using blue/green deployments.
+PCF enables users to easily conduct zero-downtime upgrades of their applications using blue/green deployments.
 
 By applying the same route to multiple versions of the application, the GoRouter will automatically balance traffic between the different versions. Once the older version is removed, all users will directed to new version with no interruption of applicaiton usage. 
 --
