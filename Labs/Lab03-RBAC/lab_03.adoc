@@ -5,7 +5,7 @@
 --
 Access into the various environments of your Pivotal Cloud Foundry instace is role based. These environments are made up of isolated tiers, the first being an Org and the section tier is known as a Space. Users are assigned roles to enable access to the various responsiblites of these environments.
 
-We are going make a new space and add a new user then assign the roles necessary to push and administer your applications.
+We are going to make a new space and add a new user then assign the roles necessary to push and administer your applications.
 --
 
 == Create a space in your organization
