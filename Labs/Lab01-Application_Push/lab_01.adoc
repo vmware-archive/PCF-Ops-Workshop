@@ -23,7 +23,7 @@ $ cf api --skip-ssl-validation https://<URL_PROVIDED_BY_INSTRUCTOR>
 $ cf login
 ----
 +
-Follow the prompts, choosing the development space.
+Follow the prompts, entering in the student credentials provided by the instructor and choosing the development space.
 
 == Build and Push!
 
