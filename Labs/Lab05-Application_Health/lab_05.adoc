@@ -117,11 +117,11 @@ time                          event                 actor               descript
 == Logs
 
 One of the most important enablers of visibility into application behavior is logging.
-Effective management of logs has historically been very difficult.
-Cloud Foundry's https://github.com/cloudfoundry/loggregator[log aggregation] components simplify log management by assuming responsibility for it.
-Application developers need only log all messages to either `STDOUT` or `STDERR`, and the platform will capture these messages.
+Effective management of logs has historically been very difficult, especially when dealing with multiple instances of applications in larger, distributed systems.
+Cloud Foundry's https://github.com/cloudfoundry/loggregator[log aggregation] components simplify log management by aggregating logs for all instances of an application.
+Application developers need only log all messages to either `STDOUT` or `STDERR`, and the platform will capture these messages and combine them with platform log messages that are relevant to those application instances.
 
-Application developers can view application logs using the CF CLI.
+Application developers can view application logs using the CF CLI, or via the Pivotal CF Apps Manager web interface.
 
 . Let's view recent log messages for `cf-scale-boot`:
 +
@@ -166,21 +166,25 @@ These events are properly interleaved based on time, giving you an accurate pict
 $ cf logs cf-scale-boot
 ----
 +
-You can try various things like refreshing the browser and triggering stop/start events to see logs being generated.
+You can try various things like refreshing the browser and triggering stop/start events to see logs being generated.  When you are finished with seeing live log entries, you can press `CTRL-C` to stop viewing the logs.
 
 == PCF Metrics
 
-Out of the box, PCF contains an imbeddeed monitoring tool called PCF Metrics. 
+The loggregator component of of Cloud Foundry not only aggregates application logs.  It also combines those log entries with monitoring metrics for the platform components supporting your application.  Pivotal provides an agentless monitoring tool called PCF Metrics that leverages these additional monitoring metrics to provide performance monitoring metrics for running applications.
 
-In your browswer, navigate to your application's page. From there click on the link that says "View in PCF Metrics".
+In your browswer, navigate to http://metrics.<DOMAIN-PROVIDED-BY-INSTRUCTOR>.  You may be asked to sign in again with your user id and password.
 
-This will bring you to the PCF Metrics page for that application. The dashboard will give you a great overview of how your application is behaving. As we continue through the lab, you can peridoically check back to this page and you can see in real time how the application is monitored by PCF Metrics.
+After signing in, the first time you access PCF Metrics, you will be asked to grant PCF Metrics the ability to examine the details associated with your applications.  Make sure to click "Authorize" to allow PCF Metrics to show you metrics from your apps.
+
+The browser will then show a search box at the top of the screen that you can use to find the applications you want to view metrics on.  Click on the search box, type `cf-scale-boot`, and select the `cf-scale-boot` application from the list.
+
+This will bring you to the PCF Metrics page for the `cf-scale-boot` application. The dashboard will give you a great overview of how your application is behaving. As we continue through the lab, you can periodically check back to this page and you can see in real time how the application is monitored by PCF Metrics.
 
 == Health
 
 Cloud Foundry's http://docs.cloudfoundry.org/concepts/architecture/#hm9k[Health Manager] actively monitors the health of our application processes and will restart them should they crash.
 
-. If you don't have one already running, start a log tail for `cf-scale-boot`:
+. If you don't have a tailing log view running, start a log tail for `cf-scale-boot`:
 +
 ----
 $ cf logs cf-scale-boot
@@ -318,4 +322,3 @@ Really delete the service cf-scale-boot-logs?> y
 Deleting service cf-scale-boot-logs in org oreilly-class / space instructor as mstine@pivotal.io...
 OK
 ----
-
