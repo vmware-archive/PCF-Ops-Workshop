@@ -25,7 +25,7 @@
 ** link:Slides/08-Ops_Workshop-Security_Overview.pdf[Presentation]
 ** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Application Security Group Clickthru]
 * Extras
-** link:Slides/10-Ops_Workshop-High_Availability.pdf[High Availiablity]
+** link:Slides/10-Ops_Workshop-High_Availability.pdf[High Availability]
 
 
 
