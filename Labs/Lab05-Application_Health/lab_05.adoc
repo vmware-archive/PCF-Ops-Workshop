@@ -257,9 +257,9 @@ image::../../Common/images/cf-scale-boot-healed.png[]
 
 Application operators will also enjoy commands like `cf logs`, but are often interested in long-term retention, indexing, and analysis of logs as well.
 Cloud Foundry currently only provides very short-term retention of logs.
-To better meet the needs of operators, Cloud Foundry provides the ability to http://docs.cloudfoundry.org/devguide/services/log-management.html[drain logs to third-party providers.]
+To retain logs for longer periods, Cloud Foundry provides the ability to http://docs.cloudfoundry.org/devguide/services/log-management.html[drain logs to third-party providers.]
 
-In this section, we'll drain logs to a very simple provider called https://papertrailapp.com[Papertrail].
+In this section, we'll drain logs for a single app to a very simple provider called https://papertrailapp.com[Papertrail].
 
 . Visit https://papertrailapp.com and create a free account.
 
@@ -267,22 +267,16 @@ In this section, we'll drain logs to a very simple provider called https://paper
 +
 image::../../Common/images/papertrail_1.png[]
 
-. Click on ``Other'', just to the right of Other Situations:
+. Note the URL + Port assigned for your system:
 +
 image::../../Common/images/papertrail_2.png[]
 
-. Choose ``I use Cloud Foundry'' and provide a name:
-+
-image::../../Common/images/papertrail_3.png[]
-
-. Note the URL + Port assigned to your application:
-+
-image::../../Common/images/papertrail_4.png[]
+. After you have noted the URL + Port for your new system, click on the "Dashboard" tab on the top right of the browser window to get back to the dashboard.  Your app instance will show up here once we configure it to start sending logs.
 
 . We'll use a Cloud Foundry http://docs.cloudfoundry.org/devguide/services/user-provided.html[user-provided service instance] to create the log drain for our application using the URL + Port provided by Papertrail:
 +
 ----
-$ cf create-user-provided-service cf-scale-boot-logs -l syslog://logs2.papertrailapp.com:43882
+$ cf create-user-provided-service cf-scale-boot-logs -l syslog://<YOUR-PAPERTRAIL-URL-AND-PORT>
 ----
 
 . We bind that service instance like those we created in link:../lab_02/lab_02.adoc[Lab 2]:
@@ -297,7 +291,7 @@ $ cf bind-service cf-scale-boot cf-scale-boot-logs
 $ cf restart cf-scale-boot
 ----
 
-. Refresh the Papertrail browser tab to see log events immediately flowing to the log viewing page:
+. Refresh the Papertrail Dashboard browser tab to see a system called "loggregator" in the list.  Click on the "loggregator" link and you will be able to see the logs for the cf-scale-boot app:
 +
 image::../../Common/images/papertrail_5.png[]
 
