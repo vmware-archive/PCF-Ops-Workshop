@@ -28,9 +28,9 @@ $ cf spaces
 ----
 $ cf create-space labtest -o <REPLACE_WITH_YOUR_ORG>
 ----
-. Verify the organization manager now has SpaceManager and SpaceDeveloper roles for the new space.
-. List the space-users in the labtest space.
+. Verify the OrgManager now has SpaceManager and SpaceDeveloper roles for the new space by listing the org-users in your org and the space-users in the labtest space.
 ----
+$ cf org-users <REPLACE_WITH_YOUR_ORG>
 $ cf space-users <REPLACE_WITH_YOUR_ORG> labtest
 ----
 In your browser, verify that your labtest space is visible in your PWS Apps Manager.
