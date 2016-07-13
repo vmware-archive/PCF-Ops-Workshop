@@ -4,13 +4,13 @@ applications:
   memory: 64M
   instances: 1
   hosts: 
-  - hello-ns
-  - hello-v1
+  - hello-${random-word}
+  - v1-hello-${random-word}
   buildpack: php_buildpack
   path: hello-v1/
 - name: hello-v2
   memory: 64M
   instances: 1
-  host: hello-v2
+  host: v2-hello-${random-word}
   buildpack: php_buildpack
   path: hello-v2/
