@@ -8,7 +8,7 @@
 ** link:Labs/Lab02-Services/lab_02.adoc[Lab]
 * PCF Installation
 ** link:Slides/03-Ops_Workshop-Platform_Installation_and_Setup.pdf[Presentation]
-** link:Slides/PCF-Installation-ClickThrough.pdf[Installation Clickthru]
+** link:Slides/PCF-Installation-ClickThrough.pdf[Clickthru - Installation]
 * Role Based Access Control
 ** link:Slides/04-Ops_Workshop-RBAC.pdf[Presentation]
 ** link:Labs/Lab03-RBAC/lab_03.adoc[Lab]
@@ -23,7 +23,7 @@
 ** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab - Blue/Green Deployment]
 * Security
 ** link:Slides/08-Ops_Workshop-Security_Overview.pdf[Presentation]
-** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Application Security Group Clickthru]
+** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Clickthru - Application Security Group]
 * Extras
 ** link:Slides/10-Ops_Workshop-High_Availability.pdf[High Availability]
 
