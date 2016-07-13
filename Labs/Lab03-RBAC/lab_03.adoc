@@ -34,13 +34,3 @@ $ cf org-users <REPLACE_WITH_YOUR_ORG>
 $ cf space-users <REPLACE_WITH_YOUR_ORG> labtest
 ----
 In your browser, verify that your labtest space is visible in your PWS Apps Manager.
-
-== Add a user to the new space
-Using the email address of the person next to you, add that user to you PWS organization. 
-In Apps Manager, click on your organization, then the Members tab, then Invite New Members.
-
-Once the new member has accepted, use the CLI to verify that you have the member in your organization.
-----
-$ cf org-users
-----
-Using the CLI, add the member to your labtest space as a SpaceDeveloper. (Hint: this is accomplished through roles)
