@@ -14,14 +14,17 @@ In the CLI, make sure you are targeting your PCF foundation.
 Using the CLI and cf help, perform the following:
 
 . Find the name of your Org
++
 ----
 $ cf target
 ----
 . List the spaces in your Org
++
 ----
 $ cf spaces
 ----
 . Create a new space called "labtest" 
++
 ----
 $ cf create-space labtest -o <REPLACE_WITH_YOUR_ORG>
 ----
