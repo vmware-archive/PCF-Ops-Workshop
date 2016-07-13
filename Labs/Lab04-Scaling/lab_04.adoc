@@ -133,7 +133,7 @@ image::../../Common/images/cf-scale-boot-unscaled.png[]
 
 == Scale from the Apps Manager
 
-.  Let's try the same scaling from the Apps Manager.  The URL of the apps manager will vary based on the PCF environment you've been assigned, but is always at `api.[pcf-domain]`, e.g. https://console.run.pivotal.io
+.  Let's try the same scaling from the Apps Manager.  The URL of the apps manager will vary based on the PCF environment you've been assigned, but is always at `apps.[pcf-domain]` (NOTE: Your instructor provided you with this URL), ex: https://apps.mypcf.cloud.fe.pivotal.io
 
 . Click into the `development` space
 +
