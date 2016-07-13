@@ -36,17 +36,17 @@ After executing the command you will notice that there are two urls listed for t
 . In a third browser tab, access the url for your hello-v2 applicaion that begins with "v2-hello".  Once entered, your browser should display the following text: _Hello world version 2_. (NOTE: This is a different version number than the previous two URLs)
 . Once your application has been tested, you can easily transition customer facing traffic to version 2 of your application.
 +
-Map your customer facing route on your v1 app that begins with "hello-" to your v2 app. `DOMAIN` refers to the portion of the route specific to your account.  (ex: If your url was hello-myrandomword.pcf2.cloud.fe.pivotal.io then th command you would enter is: _cf map-route hello-v2 pcf2.cloud.fe.pivotal.io --hostname hello-myrandomword_)
+Map your customer facing route on your v1 app that begins with "hello-" to your v2 app. `DOMAIN` refers to the portion of the route specific to your account.  (ex: If your url was hello-myrandomword.pcf2.cloud.fe.pivotal.io then the command you would enter is: _cf map-route hello-v2 pcf2.cloud.fe.pivotal.io --hostname hello-myrandomword_)
 +
 ----
-$ cf map-route hello-v2 <DOMAIN> --hostname <CUSTOMER_FACING_URL_THAT_BEGINS_WITH_HELLO>
+$ cf map-route hello-v2 <DOMAIN> --hostname <CUSTOMER_FACING_HOST_THAT_BEGINS_WITH_HELLO>
 ----
 +
-. Toggle back to the browser tab that has your customer facing url and refresh your browser using _CMD+R_ on a Mac or _FN+F5_ on a PC.  Notice that both versions are displayed.
+. Toggle back to the browser tab that has your customer facing url and refresh your browser using _CMD+R_ on a Mac or _FN+F5_ on a PC.  Notice that both versions are displayed as you continue to refresh.
 . You can now unmap the route to the version 1 application so that all traffic can be transitioned to v2 of your app.
 +
 ----
-$ cf unmap-route V1_APP_NAME DOMAIN --hostname V1_HOSTNAME
+$ cf unmap-route hello-v1 DOMAIN --hostname <CUSTOMER_FACING_HOST_THAT_BEGINS_WITH_HELLO>
 ----
 +
 Now you should only see version 2 of the application when you refresh the browser on the customer facing url tab. The end users never experienced any downtime.  NOTE: You will still be able to access the v1 and v2 applications directly by hitting their respective urls (i.e. the ones that begin with v1-hello and v2-hello).
