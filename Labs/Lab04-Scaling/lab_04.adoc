@@ -159,7 +159,7 @@ image::../../Common/images/appsmanager3.png[]
 +
 image::../../Common/images/autoscale1.png[]
 
-. Choose the Gold Plan.  This plan examines the state of load on bound applications more frequently.
+. Choose the Gold Plan and click the "Select this plan" button".  This plan examines the state of load on bound applications more frequently.
 +
 image::../../Common/images/autoscale2.png[]
 
