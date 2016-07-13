@@ -51,7 +51,7 @@ image::/../../Common/images/PWS_Marketplace.png[]
 From the CLI, let's _create_ a developer instance:
 +
 ----
-$ cf create-service cleardb spark spring-music-db
+$ cf create-service p-mysql 100mb-dev spring-music-db
 ----
 . Next we'll _bind_ the newly created instance to our `spring-music` application:
 +
