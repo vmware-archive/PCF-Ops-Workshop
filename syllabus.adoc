@@ -22,7 +22,7 @@
 ** link:Slides/07-Ops_Workshop-Patching_and_Upgrading.pdf[Presentation]
 ** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab - Blue/Green Deployment]
 * Authentication and Authorization
-** link:Slides/08-Ops_Workshop-Security_Overview.pdf[Presentation]
+** link:Slides/08-Ops_Workshop-Authentication_Authorization.pdf[Presentation]
 ** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Clickthru - Application Security Group]
 
 
