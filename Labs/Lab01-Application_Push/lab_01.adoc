@@ -34,10 +34,12 @@ $ cd $COURSE_HOME/Labs/Lab01-Application_Push/spring-music
 ----
 
 . Using the Gradle Wrapper, build and package the application:
+
 +
 ----
-$ ./gradlew assemble
+$ gradle assemble
 ----
+
 +
 The Gradle Wrapper will automatically download the appropriate version of Gradle for this project along with all of _Spring Music_'s dependencies. This may take a few moments.
 
