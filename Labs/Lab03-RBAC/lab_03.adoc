@@ -33,4 +33,4 @@ $ cf create-space labtest -o <REPLACE_WITH_YOUR_ORG>
 $ cf org-users <REPLACE_WITH_YOUR_ORG>
 $ cf space-users <REPLACE_WITH_YOUR_ORG> labtest
 ----
-In your browser, verify that your labtest space is visible in your PWS Apps Manager.
+In your browser, verify that your labtest space is visible in the Apps Manager.
