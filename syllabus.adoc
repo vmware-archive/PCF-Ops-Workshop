@@ -21,11 +21,10 @@
 * Patching and Upgrades
 ** link:Slides/07-Ops_Workshop-Patching_and_Upgrading.pdf[Presentation]
 ** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab - Blue/Green Deployment]
-* Security
+* Authorization and Authorization
 ** link:Slides/08-Ops_Workshop-Security_Overview.pdf[Presentation]
 ** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Clickthru - Application Security Group]
-* Extras
-** link:Slides/10-Ops_Workshop-High_Availability.pdf[High Availability]
+
 
 
 
