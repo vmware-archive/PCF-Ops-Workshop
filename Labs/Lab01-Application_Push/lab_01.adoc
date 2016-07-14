@@ -25,7 +25,10 @@ $ cf login
 +
 Follow the prompts, entering in the student credentials provided by the instructor and choosing the development space.
 
-== Build and Push!
+== Build (or Download) and Push!
+
+If you cannot run the gradle script to build, you can download the spring-music.war file https://github.com/vrusso-pivotal/PCF-Ops-Workshop-master/releases/download/1.0/spring-music.war[here]
+
 
 . Change to the _Spring Music_ sample application directory:
 +
