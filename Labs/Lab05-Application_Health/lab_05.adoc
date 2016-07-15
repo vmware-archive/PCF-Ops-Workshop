@@ -271,7 +271,15 @@ image::../../Common/images/papertrail_1.png[]
 +
 image::../../Common/images/papertrail_2.png[]
 
-. After you have noted the URL + Port for your new system, click on the "Dashboard" tab on the top right of the browser window to get back to the dashboard.  Your app instance will show up here once we configure it to start sending logs.
+. After you have noted the URL + Port for your new system, click on the "Settings" tab on the top right of the browser window.  Next, click on the "Log Destinations" section on the left side of the Settings screen.  Finally, click on the "Settings" button for the log destination that cooresponds to the URL + Port combination you noted earlier.
++
+image::../../Common/images/papertrail_3.png[]
+
+. Under the section titled "Accept connections via...", make sure both settings for "Plain text" are checked.  Click the "Update" button.
++
+image::../../Common/images/papertrail_4.png[]
+
+. Click on the "Dashboard" tab to get back to the dashboard.  Your app instance will show up here once we configure it to start sending logs.
 
 . We'll use a Cloud Foundry http://docs.cloudfoundry.org/devguide/services/user-provided.html[user-provided service instance] to create the log drain for our application using the URL + Port provided by Papertrail:
 +
