@@ -2,15 +2,18 @@
 
 == Workshop Prep
 
+. Confirm the logistics with the customer (date, time, on-site contact, room reservation, projector, customer supplied laptops/desktops with Internet access, ability to install the pre-requisites on the customer equipment, lunch, etc)
 . Request an environment for the dates you will need to prep and deliver the workshop.  The request form is located at:  https://docs.google.com/a/pivotal.io/forms/d/e/1FAIpQLScxska47haG1pRuQyoAHstq7A4rEBiYpYY1rAcQ1ArDUdxt6Q/viewform
 .. NOTE: If PCF Metrics is not installed in the lab environment you will need to do this prior to the workshop date.  Also, if you plan to do a live demo with JMX Bridge and jconsole you will need to install the JMX Bridge Tile. 
 . Fork this repo to a publically accessible repo.
 . Copy the PowerPoint presentations located under the "Slides" directory to your local machine.
 . If necessary, customize the presentations locally.
 . Create pdfs of the presentations and add them to the repo under the "Slides" folder (NOTE: You will want to keep the same name as the powerpoint file but with a .pdf extension otherwise the links in the syllabus.adoc will break).
-. If you have removed a presentation or added one you will need to update the syllabus.adoc
+. If you have removed a presentation or added one you will need to update the syllabus.adoc.
+. If necessary, update the agenda.adoc.
 . Remove the PowerPoint files from the public repo so that users accessing the site cannot download the editable slides.
 . Remove the instructor-prep_instructions.adoc from your publically accessible repo so that users do not see the instructions.
+. Ensure that the customer will 
 . Email participants with the publically accessible repo URL and instruct them to complete the Pre-Requisites listed in the README.md prior to the date of the workshop
 
 == Delivery Instructions
