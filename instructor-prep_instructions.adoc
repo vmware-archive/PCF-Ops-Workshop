@@ -1,30 +1,18 @@
-== Syllabus
+= Instructions for Prep and Delivery of the Ops Workshop
 
-* PCF Overview 
-** link:Slides/01-Ops_Workshop-Intro.pdf[Presentation]
-** link:Labs/Lab01-Application_Push/lab_01.adoc[Lab 1 - Pushing an Application]
-* Services
-** link:Slides/02-Ops_Workshop-Services_Overview.pdf[Presentation]
-** link:Labs/Lab02-Services/lab_02.adoc[Lab 2 - Create and Bind a Service]
-* PCF Installation
-** link:Slides/03-Ops_Workshop-Platform_Installation_and_Setup.pdf[Presentation]
-** link:Slides/PCF-Installation-ClickThrough.pdf[Clickthru - Installation]
-* Role Based Access Control
-** link:Slides/04-Ops_Workshop-RBAC.pdf[Presentation]
-** link:Labs/Lab03-RBAC/lab_03.adoc[Lab 3 - Create a Space and Assign Rights]
-* Scaling
-** link:Slides/05-Ops_Workshop-Platform_and_Application_Scaling.pdf[Presentation]
-** link:Labs/Lab04-Scaling/lab_04.adoc[Lab 4 - Scale an App Multiple Ways]
-* Platform and Application Health
-** link:Slides/06-Ops_Workshop-Platform_and_Application_Health.pdf[Presentation]
-** link:Labs/Lab05-Application_Health/lab_05.adoc[Lab 5 - Monitoring Application Health]
-* Patching and Upgrades
-** link:Slides/07-Ops_Workshop-Patching_and_Upgrading.pdf[Presentation]
-** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab 6 - Blue/Green Deployment]
-* Authentication and Authorization
-** link:Slides/08-Ops_Workshop-Authentication_Authorization.pdf[Presentation]
-** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Clickthru - Application Security Group]
+== Workshop Prep
 
+. Request an environment for the dates you will need to prep and deliver the workshop.  The request form is located at:  https://docs.google.com/a/pivotal.io/forms/d/e/1FAIpQLScxska47haG1pRuQyoAHstq7A4rEBiYpYY1rAcQ1ArDUdxt6Q/viewform
+.. NOTE: If PCF Metrics is not installed in the lab environment you will need to do this prior to the workshop date.  Also, if you plan to do a live demo with JMX Bridge and jconsole you will need to install the JMX Bridge Tile. 
+. Fork this repo to a publically accessible repo.
+. Copy the PowerPoint presentations located under the Slides directory to your local machine.
+. If necessary, customize the presentations locally.
+. Create pdfs of the presentations and add them to the repo under the Slides folder.
+. Remove the PowerPoint files from the public repo so that users accessing the site cannot download the editable slides.
+. Remove the instructor-prep_instructions.adoc from your publically accessible repo so that users do not see the instructions.
+. Email participants with the publically accessible repo URL and instruct them to complete the Pre-Requisites listed in the README.md prior to the date of the workshop
 
-
+== Delivery Instructions
+* Follow the syllabus.adoc
+* Click-through PowerPoint presentations have been provided for PCF Installation, JMX Bridge, and App Security Groups.  Instead of using the click-through presentation for PCF Installation you can login to Ops Manager and provide a live tour.  You can also do this for JMX Bridge if you have installed it in the lab. 
 
