@@ -8,7 +8,7 @@
 . Fork this repo to a publically accessible repo.
 . Copy the PowerPoint presentations located under the "Slides" directory to your local machine.
 . If necessary, customize the presentations locally.
-. Create pdfs of the presentations and add them to the repo under the "Slides" folder (NOTE: You will want to keep the same name as the powerpoint file but with a .pdf extension otherwise the links in the syllabus.adoc will break).
+. Create pdfs of the presentations and add them to the repo under the "Slides" folder (NOTE: You need to keep the same name but with a .pdf extension otherwise the links in the syllabus.adoc will break.  Also the pdfs are not in the main trunk so the links will not work until you upload them).
 . If you have removed a presentation or added one you will need to update the syllabus.adoc.
 . If necessary, update the agenda.adoc.
 . Remove the PowerPoint files from the public repo so that users accessing the site cannot download the editable slides.
