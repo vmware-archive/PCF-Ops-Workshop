@@ -1,0 +1,16 @@
+Agenda
+======
+
+|===================================================
+| 8:30  | Introductions, PCF Overview and Lab 1
+| 9:30  | Services and Lab 2
+| 10:15 | Break
+| 10:25 | PCF Installation
+| 11:10 | Role Based Access Control and Lab 3
+| 11:40 | Lunch
+| 12:40 | Scaling and Lab 4
+| 1:40  | Break
+| 1:50  | Platform and Application Health and Lab 5
+| 3:05  | Patching and Upgrades and Lab 6
+| 4:05  | AuthN/AuthZ
+|===================================================

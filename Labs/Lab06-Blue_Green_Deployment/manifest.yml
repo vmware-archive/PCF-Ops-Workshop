@@ -1,0 +1,16 @@
+---
+applications:
+- name: hello-v1
+  memory: 64M
+  instances: 1
+  hosts: 
+  - hello-${random-word}
+  - v1-hello-${random-word}
+  buildpack: php_buildpack
+  path: hello-v1/
+- name: hello-v2
+  memory: 64M
+  instances: 1
+  host: v2-hello-${random-word}
+  buildpack: php_buildpack
+  path: hello-v2/

@@ -1,0 +1,53 @@
+:compat-mode:
+= Lab 6 - Blue/Green Deployments
+
+[abstract]
+--
+PCF enables users to easily conduct zero-downtime upgrades of their applications using blue/green deployments.
+
+By applying the same route to multiple versions of the application, the GoRouter will automatically balance traffic between the different versions. Once the older version is removed, all users will directed to new version with no interruption of applicaiton usage. 
+--
+. Change to the Blue Green Deployment lab directory:
++
+----
+cd $COURSE_HOME/Labs/Lab06-Blue_Green_Deployment
+----
+. Examine the manifest.yml file in the directory and note that it will push 2 different "Hello World" php applications, hello-v1 and hello-v2.  Once you finish reviewing, push the applications using the below command:
++
+----
+$ cf push 
+----
+. Verify that you now have two different "Hello World" applications deployed to PCF by issuing the following command.  
++
+----
+$ cf apps
+----
+
+. Execute the below command in order to show your routes.
++
+----
+$ cf routes
+----
++
+After executing the command you will notice that there are two urls listed for the hello-v1 application.  One that will be used to simulate a customer facing url that is in the format of hello-<RANDOM_WORD>.<DOMAIN>.  The other will be used for internal teams to access the v1 application directly and is in the format of v1-hello-<RANDOM_WORD>.<DOMAIN>.  Notice that the hello-v2 application only has 1 url in the format of v2-hello-<RANDOM_WORD>.<DOMAIN>.  The reason for this is that we do not want any customer facing traffic hitting the v2 application yet.
++
+. In a browser, access your "Hello World" application using the customer facing route (NOTE: This one begins with "hello-" and is pointing to the hello-v1 application). Once entered, your browser should display the following text: _Hello world version 1_.
+. In a different browser tab, access the url for your hello-v1 application that begins with "v1-hello".  This should display the same results.
+. In a third browser tab, access the url for your hello-v2 applicaion that begins with "v2-hello".  Once entered, your browser should display the following text: _Hello world version 2_. (NOTE: This is a different version number than the previous two URLs)
+. Once your application has been tested, you can easily transition customer facing traffic to version 2 of your application.
++
+Map your customer facing route on your v1 app that begins with "hello-" to your v2 app. `DOMAIN` refers to the portion of the route specific to your account.  (ex: If your url was hello-myrandomword.pcf2.cloud.fe.pivotal.io then the command you would enter is: _cf map-route hello-v2 pcf2.cloud.fe.pivotal.io --hostname hello-myrandomword_)
++
+----
+$ cf map-route hello-v2 <DOMAIN> --hostname <CUSTOMER_FACING_HOST_THAT_BEGINS_WITH_HELLO>
+----
++
+. Toggle back to the browser tab that has your customer facing url and refresh your browser using _CMD+R_ on a Mac or _FN+F5_ on a PC.  Notice that both versions are displayed as you continue to refresh.
+. You can now unmap the route to the version 1 application so that all traffic can be transitioned to v2 of your app.
++
+----
+$ cf unmap-route hello-v1 DOMAIN --hostname <CUSTOMER_FACING_HOST_THAT_BEGINS_WITH_HELLO>
+----
++
+Now you should only see version 2 of the application when you refresh the browser on the customer facing url tab. The end users never experienced any downtime.  NOTE: You will still be able to access the v1 and v2 applications directly by hitting their respective urls (i.e. the ones that begin with v1-hello and v2-hello).
+

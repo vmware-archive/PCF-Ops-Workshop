@@ -1,0 +1,173 @@
+= Lab 1 - From Zero to Pushing Your First Application
+
+[abstract]
+--
+The prime directive of Pivotal Cloud Foundry is to host applications. We are going to exercise that directive by pushing a very simple Spring application.
+
+By the end of this lab you should have your spring-music application up and running in your account.
+--
+
+== Set your target environment
+
+. If you haven't already, download the latest release of the Cloud Foundry CLI from https://github.com/cloudfoundry/cli/releases for your operating system and install it.
+
+. Set the API target for the CLI:
++
+----
+$ cf api --skip-ssl-validation https://api.<DOMAIN_PROVIDED_BY_INSTRUCTOR>
+----
+
+. Login to Pivotal Cloud Foundry:
++
+----
+$ cf login
+----
++
+Follow the prompts, entering in the student credentials provided by the instructor and choosing the development space.
+
+== Build (or Download) and Push!
+
+Change to the _Spring Music_ sample application directory:
+----
+$ cd $COURSE_HOME/Labs/Lab01-Application_Push/spring-music
+----
+
+=== Download
+
+If you cannot run the gradle script to build:
+
+. Download the spring-music.war file https://github.com/vrusso-pivotal/PCF-Ops-Workshop-master/releases/download/1.0/spring-music.war[here]
+. Create the directory `/build/libs/`.
+. Place the .war file in the `/build/libs/` directory.
+. Skip down to the 'Push' section.
+
+=== Build
+
+Use the Gradle Wrapper to build and package the application:
+
+----
+$ gradle assemble
+----
+
+The Gradle Wrapper will automatically download the appropriate version of Gradle for this project along with all of _Spring Music_'s dependencies. This may take a few moments.
+
+=== Push
+
+Now use the `cf push` command to push the application to PCF!
+
+----
+$ cf push
+----
+
+You should see output similar to the following listing. Take a look at the listing callouts for a play-by-play of what's happening:
+
+====
+----
+Using manifest file /Users/vince/Documents/PCF-Ops-Workshop-master/Labs/Lab01-Application_Push/spring-music/manifest.yml
+
+Creating app spring-music in org Southeast / space vrusso as vrussoiii@pivotal.io...
+OK
+
+Creating route spring-music-pedate-bowdlerization.cfapps.io...
+OK
+
+Binding spring-music-pedate-bowdlerization.cfapps.io to spring-music...
+OK
+
+Uploading spring-music...
+Uploading app files from: /var/folders/y7/xjdjgybn74z794qc8t0gkm9c0000gn/T/unzipped-app068780761
+Uploading 569.7K, 90 files
+Done uploading               
+OK
+
+Starting app spring-music in org Southeast / space vrusso as vrussoiii@pivotal.io...
+Downloading binary_buildpack...
+Downloading java_buildpack...
+Downloading python_buildpack...
+Downloading ruby_buildpack...
+Downloading go_buildpack...
+Downloading staticfile_buildpack...
+Downloading nodejs_buildpack...
+Downloading liberty_buildpack...
+Downloading php_buildpack...
+Downloaded python_buildpack
+Downloaded nodejs_buildpack
+Downloaded java_buildpack
+Downloaded liberty_buildpack
+Downloaded php_buildpack
+Downloaded ruby_buildpack
+Downloaded binary_buildpack
+Downloaded staticfile_buildpack
+Downloaded go_buildpack
+Creating container
+Successfully created container
+Downloading app package...
+Downloaded app package (20.1M)
+Staging...
+-----> Java Buildpack Version: v3.8 (offline) | https://github.com/cloudfoundry/java-buildpack.git#29c79f2
+-----> Downloading Open Jdk JRE 1.8.0_91-unlimited-crypto from https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_91-unlimited-crypto.tar.gz (found in cache)
+       Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre (1.0s)
+-----> Downloading Open JDK Like Memory Calculator 2.0.2_RELEASE from https://download.run.pivotal.io/memory-calculator/trusty/x86_64/memory-calculator-2.0.2_RELEASE.tar.gz (found in cache)
+       Memory Settings: -Xss228K -Xmx317161K -XX:MaxMetaspaceSize=64M -Xms317161K -XX:MetaspaceSize=64M
+-----> Downloading Spring Auto Reconfiguration 1.10.0_RELEASE from https://download.run.pivotal.io/auto-reconfiguration/auto-reconfiguration-1.10.0_RELEASE.jar (found in cache)
+-----> Downloading Tomcat Instance 8.0.35 from https://download.run.pivotal.io/tomcat/tomcat-8.0.35.tar.gz (found in cache)
+       Expanding Tomcat Instance to .java-buildpack/tomcat (0.1s)
+-----> Downloading Tomcat Lifecycle Support 2.5.0_RELEASE from https://download.run.pivotal.io/tomcat-lifecycle-support/tomcat-lifecycle-support-2.5.0_RELEASE.jar (found in cache)
+-----> Downloading Tomcat Logging Support 2.5.0_RELEASE from https://download.run.pivotal.io/tomcat-logging-support/tomcat-logging-support-2.5.0_RELEASE.jar (found in cache)
+-----> Downloading Tomcat Access Logging Support 2.5.0_RELEASE from https://download.run.pivotal.io/tomcat-access-logging-support/tomcat-access-logging-support-2.5.0_RELEASE.jar (found in cache)
+Staging complete
+Uploading droplet, build artifacts cache...
+Uploading build artifacts cache...
+Uploaded droplet (73.1M)
+Uploading complete
+
+0 of 1 instances running, 1 starting
+1 of 1 instances running
+
+App started
+
+OK
+
+App spring-music was started using this command `CALCULATED_MEMORY=$($PWD/.java-buildpack/open_jdk_jre/bin/java-buildpack-memory-calculator-2.0.2_RELEASE -memorySizes=metaspace:64m..,stack:228k.. -memoryWeights=heap:65,metaspace:10,native:15,stack:10 -memoryInitials=heap:100%,metaspace:100% -stackThreads=300 -totMemory=$MEMORY_LIMIT) &&  JAVA_HOME=$PWD/.java-buildpack/open_jdk_jre JAVA_OPTS="-Djava.io.tmpdir=$TMPDIR -XX:OnOutOfMemoryError=$PWD/.java-buildpack/open_jdk_jre/bin/killjava.sh $CALCULATED_MEMORY -Daccess.logging.enabled=false -Dhttp.port=$PORT" exec $PWD/.java-buildpack/tomcat/bin/catalina.sh run`
+
+Showing health and status for app spring-music in org Southeast / space vrusso as vrussoiii@pivotal.io...
+OK
+
+requested state: started
+instances: 1/1
+usage: 512M x 1 instances
+urls: spring-music-pedate-bowdlerization.cfapps.io
+last uploaded: Tue Jul 12 18:07:15 UTC 2016
+stack: unknown
+buildpack: java-buildpack=v3.8-offline-https://github.com/cloudfoundry/java-buildpack.git#29c79f2 open-jdk-like-jre=1.8.0_91-unlimited-crypto open-jdk-like-memory-calculator=2.0.2_RELEASE spring-auto-reconfiguration=1.10.0_RELEASE tomcat-access-logging-support=2....
+
+     state     since                    cpu    memory         disk         details
+#0   running   2016-07-12 02:07:56 PM   0.0%   840K of 512M   1.3M of 1G
+----
+
+<1> The CLI is using a manifest to provide necessary configuration details such as application name, memory to be allocated, and path to the application artifact.
+Take a look at `manifest.yml` to see how.
+<2> In most cases, the CLI indicates each Cloud Foundry API call as it happens.
+In this case, the CLI has created an application record for _Spring Music_ in your assigned space.
+<3> All HTTP/HTTPS requests to applications will flow through Cloud Foundry's front-end router called http://docs.cloudfoundry.org/concepts/architecture/router.html[(Go)Router].
+Here the CLI is creating a route with random word tokens inserted (again, see `manifest.yml` for a hint!) to prevent route collisions across the default PCF domain.
+<4> Now the CLI is _binding_ the created route to the application.
+Routes can actually be bound to multiple applications to support techniques such as http://www.mattstine.com/2013/07/10/blue-green-deployments-on-cloudfoundry[blue-green deployments].
+<5> The CLI finally uploads the application bits to PCF. Notice that it's uploading _90 files_! This is because Cloud Foundry actually explodes a ZIP artifact before uploading it for caching purposes.
+<6> Now we begin the staging process. The https://github.com/cloudfoundry/java-buildpack[Java Buildpack] is responsible for assembling the runtime components necessary to run the application.
+<7> Here we see the version of the JRE that has been chosen and installed.
+<8> And here we see the version of Tomcat that has been chosen and installed.
+<9> The complete package of your application and all of its necessary runtime components is called a _droplet_.
+Here the droplet is being uploaded to PCF's internal blobstore so that it can be easily copied to one or more _http://docs.cloudfoundry.org/concepts/diego/diego-components.html#cell-components[Diego Cells]_ for execution.
+<10> The CLI tells you exactly what command and argument set was used to start your application.
+<11> Finally the CLI reports the current status of your application's health.
+You can get the same output at any time by typing `cf app spring-music`.
+====
+
+Visit the application in your browser by hitting the route that was generated by the CLI.  You can find the route by typing `cf apps`, and it will look something like `https://spring-music-pedate-bowdlerization.<DOMAIN-PROVIDED-BY-INSTRUCTOR>`
+
+image::/../../Common/images/Spring_Music_NS.png[]
+
+Be sure to click on the `information icon` in the top right-hand corner of the UI.
+This gives you important information about the state of the currently running _Spring Music_ instance, including what Spring Profiles are turned on and what Cloud Foundry services are bound.
+It will become important in the next lab!

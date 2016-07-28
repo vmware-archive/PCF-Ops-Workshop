@@ -1,0 +1,30 @@
+== Syllabus
+
+* PCF Overview 
+** link:Slides/01-Ops_Workshop-Intro.pdf[Presentation]
+** link:Labs/Lab01-Application_Push/lab_01.adoc[Lab 1 - Pushing an Application]
+* Services
+** link:Slides/02-Ops_Workshop-Services_Overview.pdf[Presentation]
+** link:Labs/Lab02-Services/lab_02.adoc[Lab 2 - Create and Bind a Service]
+* PCF Installation
+** link:Slides/03-Ops_Workshop-Platform_Installation_and_Setup.pdf[Presentation]
+** link:Slides/PCF-Installation-ClickThrough.pdf[Clickthru - Installation]
+* Role Based Access Control
+** link:Slides/04-Ops_Workshop-RBAC.pdf[Presentation]
+** link:Labs/Lab03-RBAC/lab_03.adoc[Lab 3 - Create a Space and Assign Rights]
+* Scaling
+** link:Slides/05-Ops_Workshop-Platform_and_Application_Scaling.pdf[Presentation]
+** link:Labs/Lab04-Scaling/lab_04.adoc[Lab 4 - Scale an App Multiple Ways]
+* Platform and Application Health
+** link:Slides/06-Ops_Workshop-Platform_and_Application_Health.pdf[Presentation]
+** link:Labs/Lab05-Application_Health/lab_05.adoc[Lab 5 - Monitoring Application Health]
+* Patching and Upgrades
+** link:Slides/07-Ops_Workshop-Patching_and_Upgrading.pdf[Presentation]
+** link:Labs/Lab06-Blue_Green_Deployment/lab_06.adoc[Lab 6 - Blue/Green Deployment]
+* Authentication and Authorization
+** link:Slides/08-Ops_Workshop-Authentication_Authorization.pdf[Presentation]
+** link:Slides/PCF-Application_Security_Groups-ClickThrough.pdf[Clickthru - Application Security Group]
+
+
+
+
