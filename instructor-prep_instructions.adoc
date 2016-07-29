@@ -13,7 +13,6 @@
 . If necessary, update the agenda.adoc.
 . Remove the PowerPoint files from the public repo so that users accessing the site cannot download the editable slides.
 . Remove the instructor-prep_instructions.adoc from your publically accessible repo so that users do not see the instructions.
-. Ensure that the customer will 
 . Email participants with the publically accessible repo URL and instruct them to complete the Pre-Requisites listed in the README.md prior to the date of the workshop
 
 == Delivery Instructions
